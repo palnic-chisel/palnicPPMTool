@@ -1,4 +1,4 @@
-package io.agileintelligence.ppmtool.domain;
+package com.nicolapalumbo.ppmtool.domain;
 
 
 import com.fasterxml.jackson.annotation.JsonFormat;
@@ -21,7 +21,7 @@ public class Project {
     @Column(updatable = false, unique = true)
     private String projectIdentifier;
     @NotBlank(message = "Project description is required")
-    private String description;
+    private String projectDescription;
     @JsonFormat(pattern = "yyyy-mm-dd")
     private Date start_date;
     @JsonFormat(pattern = "yyyy-mm-dd")
@@ -59,11 +59,11 @@ public class Project {
     }
 
     public String getDescription() {
-        return description;
+        return projectDescription;
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        this.projectDescription = description;
     }
 
     public Date getStart_date() {
